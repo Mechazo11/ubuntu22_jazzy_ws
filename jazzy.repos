@@ -27,18 +27,6 @@ repositories:
     type: git
     url: https://github.com/ament/uncrustify_vendor.git
     version: jazzy
-  eProsima/Fast-CDR:
-    type: git
-    url: https://github.com/eProsima/Fast-CDR.git
-    version: 2.2.x
-  eProsima/Fast-DDS:
-    type: git
-    url: https://github.com/eProsima/Fast-DDS.git
-    version: 2.14.x
-  eProsima/foonathan_memory_vendor:
-    type: git
-    url: https://github.com/eProsima/foonathan_memory_vendor.git
-    version: master
   eclipse-cyclonedds/cyclonedds:
     type: git
     url: https://github.com/eclipse-cyclonedds/cyclonedds.git
@@ -47,18 +35,6 @@ repositories:
     type: git
     url: https://github.com/eclipse-iceoryx/iceoryx.git
     version: release_2.0
-  gazebo-release/gz_cmake_vendor:
-    type: git
-    url: https://github.com/gazebo-release/gz_cmake_vendor.git
-    version: jazzy
-  gazebo-release/gz_math_vendor:
-    type: git
-    url: https://github.com/gazebo-release/gz_math_vendor.git
-    version: jazzy
-  gazebo-release/gz_utils_vendor:
-    type: git
-    url: https://github.com/gazebo-release/gz_utils_vendor.git
-    version: jazzy
   osrf/osrf_pycommon:
     type: git
     url: https://github.com/osrf/osrf_pycommon.git
@@ -371,6 +347,18 @@ repositories:
     type: git
     url: https://github.com/ros2/rpyutils.git
     version: jazzy
+  gazebo-release/gz_cmake_vendor:
+    type: git
+    url: https://github.com/gazebo-release/gz_cmake_vendor.git
+    version: jazzy
+  gazebo-release/gz_math_vendor:
+    type: git
+    url: https://github.com/gazebo-release/gz_math_vendor.git
+    version: jazzy
+  gazebo-release/gz_utils_vendor:
+    type: git
+    url: https://github.com/gazebo-release/gz_utils_vendor.git
+    version: jazzy
   ros2/rviz:
     type: git
     url: https://github.com/ros2/rviz.git
@@ -411,3 +399,7 @@ repositories:
     type: git
     url: https://github.com/ros2/yaml_cpp_vendor.git
     version: jazzy
+  ros2_control:
+    type: git
+    url: https://github.com/ros-controls/ros2_control.git
+    version: master
