@@ -4,9 +4,8 @@ A modified source build of ROS 2 Jazzy Workspace compatible with Ubuntu 22.04.
 
 ## Modifications
 
-* Compiled to only support **CycloneDDS** middleware
-* Removed all packages related to gazebo, those will be made available on a separate workspace
-* Added ros2_control
+* By default uses **CycloneDDS** middleware
+* Added ros2_control and its relevant packages.
 
 ## Build
 
