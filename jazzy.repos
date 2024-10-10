@@ -399,7 +399,35 @@ repositories:
     type: git
     url: https://github.com/ros2/yaml_cpp_vendor.git
     version: jazzy
-  ros2_control:
+  ros2/diagnostics:
+    type: git
+    url: https://github.com/ros/diagnostics.git
+    version: ros2-jazzy
+  ros-controls/ros2_control:
     type: git
     url: https://github.com/ros-controls/ros2_control.git
     version: master
+  ros-controls/realtime_tools:
+    type: git
+    url: https://github.com/ros-controls/realtime_tools.git
+    version: master
+  ros-controls/control_msgs:
+    type: git
+    url: https://github.com/ros-controls/control_msgs.git
+    version: master
+  picnikrobotics/generate_parameter_library:
+    type: git
+    url: https://github.com/PickNikRobotics/generate_parameter_library.git
+    version: main
+  picnikrobotics/RSL:
+    type: git
+    url: https://github.com/PickNikRobotics/RSL.git
+    version: main
+  picnikrobotics/cpp_polyfills:
+    type: git
+    url: https://github.com/PickNikRobotics/cpp_polyfills.git
+    version: main
+  pal_robotics/backward_ros:
+    type: git
+    url: https://github.com/pal-robotics/backward_ros.git
+    version: foxy-devel
