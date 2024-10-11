@@ -5,7 +5,14 @@ A modified source build of ROS 2 Jazzy Workspace compatible with Ubuntu 22.04.
 ## Modifications
 
 * By default uses **CycloneDDS** middleware
-* Added ros2_control and its relevant packages.
+* Added **ros2_control** and its relevant packages.
+
+### Prerequisite note
+
+* Before you build this workspace please ensure no ROS 2 Humble workspaces be it the global workspace ```source /opt/ros/humble/setup.bash``` or any of its variant is sourced. This will cause a build failure most notably with Jazzy version of ```ros2_control```. Check this [issue](https://github.com/ros-controls/ros2_control/issues/1787) for more details.
+* Building from source may take 20 - 30 minutes to complete.
+* Please allot about 8GB of space, 16GB (32 GB recommended) RAM
+* 
 
 ## Build
 
@@ -22,5 +29,3 @@ fastcdr rmw_fastrtps_cpp rmw_fastrtps_dynamic_cpp rmw_fastrtps_shared_cpp rmw_co
 
 colcon build --symlink-install --cmake-args -DCMAKE_CXX_FLAGS="-w"
 ```
-
-```colcon build --packages-up-to ros2_control --cmake-args -DCMAKE_CXX_FLAGS="-w"```

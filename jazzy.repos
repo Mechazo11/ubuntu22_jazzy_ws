@@ -431,3 +431,7 @@ repositories:
     type: git
     url: https://github.com/pal-robotics/backward_ros.git
     version: foxy-devel
+  ros-perception/vision_opencv:
+    type: git
+    url: https://github.com/Mechazo11/vision_opencv.git
+    version: rolling
