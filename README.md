@@ -6,6 +6,7 @@ A modified source build of ROS 2 Jazzy Workspace compatible with Ubuntu 22.04.
 
 * By default uses **CycloneDDS** middleware
 * Added **ros2_control** and its relevant packages.
+* Added **vision_opencv** packages with corrected Cmake for compatibility with Boost 1.74 and Python 3.10
 
 ### Prerequisite note
 
@@ -27,5 +28,9 @@ vcs import src < jazzy.repos
 rosdep install -r --from-paths src --ignore-src -y --rosdistro jazzy --skip-keys "fastrtps
 fastcdr rmw_fastrtps_cpp rmw_fastrtps_dynamic_cpp rmw_fastrtps_shared_cpp rmw_connextdds rosidl_typesupport_fastrtps_c rosidl_typesupport_fastrtps_cpp fastrtps_cmake_module demo_nodes_py rti-connext-dds-6.0.1 urdfdom_headers"
 
-colcon build --symlink-install --cmake-args -DCMAKE_CXX_FLAGS="-w"
+colcon build --packages-up-to amnet_cmake_ros
+source ./install/setup.bash
+colcon build 
 ```
+
+* The above **hack** is due to the ```diagnostic_updater``` failing to finding ```amnet_cmake_ros```
