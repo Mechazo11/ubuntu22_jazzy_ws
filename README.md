@@ -27,10 +27,7 @@ vcs import src < jazzy.repos --recursive
 
 rosdep install -r --from-paths src --ignore-src -y --rosdistro jazzy --skip-keys "fastrtps
 fastcdr rmw_fastrtps_cpp rmw_fastrtps_dynamic_cpp rmw_fastrtps_shared_cpp rmw_connextdds rosidl_typesupport_fastrtps_c rosidl_typesupport_fastrtps_cpp fastrtps_cmake_module demo_nodes_py rti-connext-dds-6.0.1 urdfdom_headers"
-
-colcon build --packages-up-to amnet_cmake_ros --cmake-args -DCMAKE_BUILD_TYPE=Release
-source ./install/setup.bash
-colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+colcon build
 ```
 
 * The above **hack** is due to the ```diagnostic_updater``` failing to finding ```amnet_cmake_ros```
