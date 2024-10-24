@@ -403,6 +403,10 @@ repositories:
     type: git
     url: https://github.com/ros/diagnostics.git
     version: ros2-jazzy
+  ros2/xacro:
+    type: git
+    url: https://github.com/ros/xacro.git
+    version: ros2
   ros-controls/ros2_control:
     type: git
     url: https://github.com/ros-controls/ros2_control.git
