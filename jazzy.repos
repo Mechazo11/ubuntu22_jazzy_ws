@@ -139,6 +139,10 @@ repositories:
     type: git
     url: https://github.com/ros-visualization/tango_icons_vendor.git
     version: jazzy
+  ros-visualization/interactive_marker_twist_server:
+    type: git
+    url: https://github.com/ros-visualization/interactive_marker_twist_server.git
+    version: foxy-devel
   ros/class_loader:
     type: git
     url: https://github.com/ros/class_loader.git
@@ -439,3 +443,7 @@ repositories:
     type: git
     url: https://github.com/Mechazo11/vision_opencv.git
     version: rolling
+  ros-visualization/interactive_marker_twist_server:
+    type: git
+    url: https://github.com/Mechazo11/interactive_marker_twist_server.git
+    version: jazzy

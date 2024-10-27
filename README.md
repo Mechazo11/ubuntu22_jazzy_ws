@@ -30,4 +30,6 @@ fastcdr rmw_fastrtps_cpp rmw_fastrtps_dynamic_cpp rmw_fastrtps_shared_cpp rmw_co
 colcon build
 ```
 
+```colcon build --packages-select interactive_marker_twist_server```
+
 * The above **hack** is due to the ```diagnostic_updater``` failing to finding ```amnet_cmake_ros```
