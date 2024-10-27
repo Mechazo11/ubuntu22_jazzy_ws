@@ -459,3 +459,7 @@ repositories:
     type: git
     url: https://github.com/ros-drivers/joystick_drivers.git
     version: ros2
+  ros2/teleop_twist_joy:
+    type: git
+    url: https://github.com/ros2/teleop_twist_joy.git
+    version: ros2
