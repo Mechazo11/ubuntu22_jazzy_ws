@@ -447,3 +447,11 @@ repositories:
     type: git
     url: https://github.com/Mechazo11/interactive_marker_twist_server.git
     version: jazzy
+  ros-teleop/twist_mux:
+    type: git
+    url: https://github.com/ros-teleop/twist_mux.git
+    version: rolling
+  ros-teleop/twist_mux_msgs:
+    type: git
+    url: https://github.com/ros-teleop/twist_mux_msgs.git
+    version: master
