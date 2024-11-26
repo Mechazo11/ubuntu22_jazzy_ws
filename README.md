@@ -32,33 +32,3 @@ colcon build --packages-up-to ament_cmake_ros
 source ./install/setup.bash
 colcon build --cmake-args -DCMAKE_CXX_FLAGS="-w"
 ```
-
-
-* Need to fix this
-
-```bash
-
---- stderr: mecanum_drive_controller                                                        
-/home/tigerwife/ubuntu22_jazzy_ws/src/ros-controls/ros2_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp: In member function ‘virtual controller_interface::CallbackReturn mecanum_drive_controller::MecanumDriveController::on_deactivate(const rclcpp_lifecycle::State&)’:
-/home/tigerwife/ubuntu22_jazzy_ws/src/ros-controls/ros2_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp:316:39: error: void value not ignored as it ought to be
-  316 |       command_interfaces_[i].set_value(std::numeric_limits<double>::quiet_NaN());
-      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/tigerwife/ubuntu22_jazzy_ws/src/ros-controls/ros2_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp: In member function ‘virtual controller_interface::return_type mecanum_drive_controller::MecanumDriveController::update_and_write_commands(const rclcpp::Time&, const rclcpp::Duration&)’:
-/home/tigerwife/ubuntu22_jazzy_ws/src/ros-controls/ros2_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp:447:48: error: could not convert ‘(&((mecanum_drive_controller::MecanumDriveController*)this)->mecanum_drive_controller::MecanumDriveController::<anonymous>.controller_interface::ChainableControllerInterface::<anonymous>.controller_interface::ControllerInterfaceBase::command_interfaces_.std::vector<hardware_interface::LoanedCommandInterface>::operator[](((std::vector<hardware_interface::LoanedCommandInterface>::size_type)mecanum_drive_controller::MecanumDriveController::FRONT_LEFT)))->hardware_interface::LoanedCommandInterface::set_value(((double)wheel_front_left_vel))’ from ‘void’ to ‘bool’
-  447 |       command_interfaces_[FRONT_LEFT].set_value(wheel_front_left_vel) &&
-      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
-/home/tigerwife/ubuntu22_jazzy_ws/src/ros-controls/ros2_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp:448:49: error: could not convert ‘(&((mecanum_drive_controller::MecanumDriveController*)this)->mecanum_drive_controller::MecanumDriveController::<anonymous>.controller_interface::ChainableControllerInterface::<anonymous>.controller_interface::ControllerInterfaceBase::command_interfaces_.std::vector<hardware_interface::LoanedCommandInterface>::operator[](((std::vector<hardware_interface::LoanedCommandInterface>::size_type)mecanum_drive_controller::MecanumDriveController::FRONT_RIGHT)))->hardware_interface::LoanedCommandInterface::set_value(((double)wheel_front_right_vel))’ from ‘void’ to ‘bool’
-  448 |       command_interfaces_[FRONT_RIGHT].set_value(wheel_front_right_vel) &&
-      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/home/tigerwife/ubuntu22_jazzy_ws/src/ros-controls/ros2_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp:458:75: error: could not convert ‘(&((mecanum_drive_controller::MecanumDriveController*)this)->mecanum_drive_controller::MecanumDriveController::<anonymous>.controller_interface::ChainableControllerInterface::<anonymous>.controller_interface::ControllerInterfaceBase::command_interfaces_.std::vector<hardware_interface::LoanedCommandInterface>::operator[](((std::vector<hardware_interface::LoanedCommandInterface>::size_type)mecanum_drive_controller::MecanumDriveController::FRONT_LEFT)))->hardware_interface::LoanedCommandInterface::set_value(0.0)’ from ‘void’ to ‘bool’
-  458 |     const bool value_set_error = command_interfaces_[FRONT_LEFT].set_value(0.0) &&
-      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
-/home/tigerwife/ubuntu22_jazzy_ws/src/ros-controls/ros2_controllers/mecanum_drive_controller/src/mecanum_drive_controller.cpp:459:76: error: could not convert ‘(&((mecanum_drive_controller::MecanumDriveController*)this)->mecanum_drive_controller::MecanumDriveController::<anonymous>.controller_interface::ChainableControllerInterface::<anonymous>.controller_interface::ControllerInterfaceBase::command_interfaces_.std::vector<hardware_interface::LoanedCommandInterface>::operator[](((std::vector<hardware_interface::LoanedCommandInterface>::size_type)mecanum_drive_controller::MecanumDriveController::FRONT_RIGHT)))->hardware_interface::LoanedCommandInterface::set_value(0.0)’ from ‘void’ to ‘bool’
-  459 |                                  command_interfaces_[FRONT_RIGHT].set_value(0.0) &&
-      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
-gmake[2]: *** [CMakeFiles/mecanum_drive_controller.dir/build.make:76: CMakeFiles/mecanum_drive_controller.dir/src/mecanum_drive_controller.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:208: CMakeFiles/mecanum_drive_controller.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
----
-
-```
