@@ -14,8 +14,18 @@ A modified source build of ROS 2 Jazzy Workspace compatible with Ubuntu 22.04. I
 
 ### Prerequisite note
 
+* 01/07/2024: `lttng-moudles-dkms` required by the `lttngpy` package, may fail when trying to install it using `apt install`. A suggested [solution](https://askubuntu.com/questions/1513837/lttng-modules-dkms-install-error) is to add a stable repository for their package. Install this dependency first as shown below
+
+```bash
+sudo apt-add-repository ppa:lttng/stable-2.13
+sudo apt-get update
+sudo apt-get install lttng-tools lttng-modules-dkms liblttng-ust-dev
+```
+
 * Before you build this workspace please ensure no ROS 2 Humble workspaces be it the global workspace ```source /opt/ros/humble/setup.bash``` or any of its variant is sourced. This will cause a build failure most notably with Jazzy version of ```ros2_control```. Check this [issue](https://github.com/ros-controls/ros2_control/issues/1787) for more details.
+
 * Building from source may take 20 - 30 minutes to complete.
+
 * Please allot about 8GB of space, 16GB (32 GB recommended) RAM
 
 ## Build
